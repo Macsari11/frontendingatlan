@@ -1,0 +1,16 @@
+CREATE TABLE ingatlanok (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    cim VARCHAR(255) NOT NULL,
+    leiras TEXT NOT NULL,
+    ar INT(11) NOT NULL
+);
+
+-- Table for interested parties
+CREATE TABLE erdeklodok (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    hirdetes_id INT(11) NOT NULL,
+    nev VARCHAR(255) NOT NULL,
+    email VARCHAR(255),
+    telefon VARCHAR(20),
+    FOREIGN KEY (hirdetes_id) REFERENCES ingatlanok(id) ON DELETE CASCADE
+);
