@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingatlan Hirdetések</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ingatlan Hirdetések</h1>
+    </header>
+    <main>
+        <section id="hirdetesek">
+            <div class="hirdetes">
+                <h2>Eladó lakás</h2>
+                <img src="https://img.jofogas.hu/images/59_nm_es_lakas_elado_Pecs_669342504625260.jpg" alt="Lakás képe">
+                <p>Ár: 45 000 000 Ft</p>
+                <p>Helyszín: Budapest, V. kerület</p>
+                <button class="erdekel-gomb" onclick="emailKuldes('Eladó lakás', 'Tóth Ádám', 'Budapest, V. kerület', '06701234567')">Érdekel</button>
+                <button class="torles-gomb" onclick="torles(this)">Törlés</button>
+            </div>
+        </section>
+        <section id="uj-hirdetes">
+            <h2>Új hirdetés felvitele</h2>
+            <form id="hirdetes-form">
+                <label for="cim">Cím:</label>
+                <input type="text" id="cim" name="cim" required>
+                <label for="ar">Ár:</label>
+                <input type="number" id="ar" name="ar" required>
+                <label for="helyszin">Helyszín:</label>
+                <input type="text" id="helyszin" name="helyszin" required>
+                <label for="leiras">Leírás:</label>
+                <textarea id="leiras" name="leiras" required></textarea>
+                <label for="kep">Kép URL:</label>
+                <input type="url" id="kep" name="kep">
+                <button type="submit">Hirdetés hozzáadása</button>
+            </form>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
