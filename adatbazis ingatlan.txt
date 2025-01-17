@@ -1,0 +1,27 @@
+INGATLANOK(ID<-KULCS   , ar,telepules,szobaszam,allapot,alapterulet,orszagID)
+
+INGATLANOK:
+	1.ID(autoincrement)//int(11)
+	2.ar(int(11),NOT NULL)
+	3.telepules(varchar(255),NOT NULL)
+	4.szobaszam(varchar(5)NOT NULL)
+	5.leiras(varchar(255))
+	6.alapterulet(int(11))
+	7.orszagID(char(3)) //FK kapcsolat az orszag nemzetközi azonosítójához
+	8.kategoriaID(int(11)) // FK kulso kulcs kategoriakhoz
+	
+
+ORSZAG(NEMZETKOZIAZONOSITO, orszagneve)
+
+	1.nemzetkoziazonosito(char(3),NOT NULL, UNIQE)
+	2.orszagneve(varchar(255),NOT NULL)
+	
+KATEGORIA(ID,kategoriak)
+
+	1.ID(autoincrement)
+	2.kategoriak(carchar(100),NOT NULL)
+	
+	
+
+	
+
